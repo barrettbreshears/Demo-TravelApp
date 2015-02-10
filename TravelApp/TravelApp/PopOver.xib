@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopOver">
+            <connections>
+                <outlet property="afterBeforeSeg" destination="FdE-zc-zpx" id="Wge-gg-vX5"/>
+                <outlet property="beforeAfterLabel" destination="2XE-a5-rDD" id="uQc-Pz-W41"/>
+                <outlet property="datePicker" destination="ggK-Bb-esV" id="siY-gv-gev"/>
+                <outlet property="dateView" destination="Ryk-08-f8e" id="xeT-yL-Tte"/>
+                <outlet property="filterByLabel" destination="nbj-At-ZFh" id="hcB-46-KuP"/>
+                <outlet property="filterDateBtn" destination="XA3-WV-otz" id="WHo-EB-StS"/>
+                <outlet property="filterSeg" destination="iGR-BW-ncP" id="Mpg-Ka-QSV"/>
+                <outlet property="filterTextField" destination="oyq-Vi-Y7l" id="BkX-TP-Zt0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter By:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epz-pe-rUR">
+                    <rect key="frame" x="8" y="15" width="68" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Zg5-R6-xWI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iGR-BW-ncP">
+                    <rect key="frame" x="8" y="44" width="584" height="29"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="rho-CH-20Z"/>
+                    </constraints>
+                    <segments>
+                        <segment title="Destination"/>
+                        <segment title="Start Date"/>
+                        <segment title="End Date"/>
+                        <segment title="Comment"/>
+                    </segments>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="filterSegmentedChanged:" destination="-1" eventType="valueChanged" id="BxM-mr-X6f"/>
+                    </connections>
+                </segmentedControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrW-Ey-DLr">
+                    <rect key="frame" x="8" y="548" width="117" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="UX6-cl-Teg"/>
+                        <constraint firstAttribute="width" constant="117" id="fna-0b-Men"/>
+                    </constraints>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissFilter:" destination="-1" eventType="touchUpInside" id="THg-5l-skh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfZ-Fi-Cce">
+                    <rect key="frame" x="475" y="548" width="117" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="117" id="059-wX-L7i"/>
+                        <constraint firstAttribute="height" constant="44" id="EX9-IR-77W"/>
+                    </constraints>
+                    <state key="normal" title="Add Filter">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="setFilter:" destination="-1" eventType="touchUpInside" id="F3X-eX-flt"/>
+                    </connections>
+                </button>
+                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FdE-zc-zpx">
+                    <rect key="frame" x="8" y="109" width="584" height="29"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="g0X-sy-Kkp"/>
+                    </constraints>
+                    <segments>
+                        <segment title="After"/>
+                        <segment title="Before"/>
+                    </segments>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="beforeAfterSegmentedChanged:" destination="-1" eventType="valueChanged" id="Xp3-Tp-xJL"/>
+                    </connections>
+                </segmentedControl>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XE-a5-rDD">
+                    <rect key="frame" x="8" y="151" width="584" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="gWA-eu-bbR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XA3-WV-otz">
+                    <rect key="frame" x="8" y="186" width="584" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Bot-yB-mcE"/>
+                    </constraints>
+                    <state key="normal" title="Date">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="selectFilterDate:" destination="-1" eventType="touchUpInside" id="wgI-4i-5MD"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryk-08-f8e">
+                    <rect key="frame" x="0.0" y="385" width="600" height="215"/>
+                    <subviews>
+                        <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ggK-Bb-esV">
+                            <rect key="frame" x="0.0" y="53" width="600" height="162"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="8B8-UE-lrt"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="436041793.758407">
+                                <!--2014-10-26 18:43:13 +0000-->
+                            </date>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWS-aj-gGh">
+                            <rect key="frame" x="14" y="8" width="80" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="AWa-xi-frt"/>
+                                <constraint firstAttribute="width" constant="80" id="C5p-6A-hID"/>
+                            </constraints>
+                            <state key="normal" title="Select Date">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="selectDate:" destination="-1" eventType="touchUpInside" id="G5E-04-LN1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ggK-Bb-esV" secondAttribute="bottom" id="Ace-TI-wKj"/>
+                        <constraint firstItem="yWS-aj-gGh" firstAttribute="top" secondItem="Ryk-08-f8e" secondAttribute="top" constant="8" id="NCX-lb-6uC"/>
+                        <constraint firstAttribute="trailing" secondItem="ggK-Bb-esV" secondAttribute="trailing" id="PPy-N1-sX4"/>
+                        <constraint firstItem="ggK-Bb-esV" firstAttribute="leading" secondItem="Ryk-08-f8e" secondAttribute="leading" id="Yza-Gb-bao"/>
+                        <constraint firstItem="yWS-aj-gGh" firstAttribute="leading" secondItem="Ryk-08-f8e" secondAttribute="leading" constant="14" id="hWb-jf-qGz"/>
+                        <constraint firstAttribute="height" constant="215" id="u7P-Gl-qvg"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Enter search term" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyq-Vi-Y7l">
+                    <rect key="frame" x="8" y="109" width="584" height="399"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="399" id="xa8-ZN-xaI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="xa8-ZN-xaI"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="xIf-hU-aya"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbj-At-ZFh">
+                    <rect key="frame" x="8" y="80" width="584" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="pgu-Qy-dWT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="oyq-Vi-Y7l" firstAttribute="top" secondItem="nbj-At-ZFh" secondAttribute="bottom" constant="8" id="0gp-Ra-ec6"/>
+                <constraint firstAttribute="trailing" secondItem="Ryk-08-f8e" secondAttribute="trailing" id="1uU-yF-oI1"/>
+                <constraint firstAttribute="bottom" secondItem="WrW-Ey-DLr" secondAttribute="bottom" constant="8" id="2yC-Pn-5e4"/>
+                <constraint firstItem="Epz-pe-rUR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="15" id="4Wm-Wa-dfj"/>
+                <constraint firstAttribute="bottom" secondItem="dfZ-Fi-Cce" secondAttribute="bottom" constant="8" id="7WH-bM-dtG"/>
+                <constraint firstItem="XA3-WV-otz" firstAttribute="top" secondItem="2XE-a5-rDD" secondAttribute="bottom" constant="14" id="7hC-ZP-CyF"/>
+                <constraint firstAttribute="trailing" secondItem="nbj-At-ZFh" secondAttribute="trailing" constant="8" id="9JH-H3-oQV"/>
+                <constraint firstItem="dfZ-Fi-Cce" firstAttribute="top" secondItem="oyq-Vi-Y7l" secondAttribute="bottom" constant="40" id="B3C-iP-byT"/>
+                <constraint firstItem="XA3-WV-otz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="CRP-0M-THI"/>
+                <constraint firstAttribute="trailing" secondItem="XA3-WV-otz" secondAttribute="trailing" constant="8" id="EGR-db-9B6"/>
+                <constraint firstAttribute="trailing" secondItem="oyq-Vi-Y7l" secondAttribute="trailing" constant="8" id="ELy-Ih-Dug"/>
+                <constraint firstItem="iGR-BW-ncP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="LDB-gV-TbL"/>
+                <constraint firstItem="Ryk-08-f8e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MfR-rZ-i4e"/>
+                <constraint firstItem="iGR-BW-ncP" firstAttribute="top" secondItem="Epz-pe-rUR" secondAttribute="bottom" constant="8" id="RvL-gD-kx3"/>
+                <constraint firstItem="FdE-zc-zpx" firstAttribute="top" secondItem="nbj-At-ZFh" secondAttribute="bottom" constant="8" id="TXD-7c-g6g"/>
+                <constraint firstAttribute="trailing" secondItem="dfZ-Fi-Cce" secondAttribute="trailing" constant="8" id="YOu-cg-bDK"/>
+                <constraint firstItem="nbj-At-ZFh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="bjo-uT-g8o"/>
+                <constraint firstItem="WrW-Ey-DLr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="cnG-d2-EwA"/>
+                <constraint firstAttribute="trailing" secondItem="iGR-BW-ncP" secondAttribute="trailing" constant="8" id="dZ0-Sn-9jV"/>
+                <constraint firstItem="nbj-At-ZFh" firstAttribute="top" secondItem="iGR-BW-ncP" secondAttribute="bottom" constant="8" id="eTY-oc-Mad"/>
+                <constraint firstItem="2XE-a5-rDD" firstAttribute="top" secondItem="FdE-zc-zpx" secondAttribute="bottom" constant="14" id="fyS-92-Obl"/>
+                <constraint firstItem="Epz-pe-rUR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="gof-RD-9a6"/>
+                <constraint firstAttribute="bottom" secondItem="Ryk-08-f8e" secondAttribute="bottom" id="nt1-Q0-Nxm"/>
+                <constraint firstItem="2XE-a5-rDD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="piv-Az-N8k"/>
+                <constraint firstAttribute="trailing" secondItem="2XE-a5-rDD" secondAttribute="trailing" constant="8" id="s9p-yr-1v0"/>
+                <constraint firstItem="oyq-Vi-Y7l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="sRE-4d-kd2"/>
+                <constraint firstItem="FdE-zc-zpx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="uqb-6q-Efw"/>
+                <constraint firstAttribute="trailing" secondItem="FdE-zc-zpx" secondAttribute="trailing" constant="8" id="wZt-2I-waf"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+</document>

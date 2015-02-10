@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EA8366EA-E08C-48B1-BDFF-59866F7B09E0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TravelApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BCEFADE4891BE3610B8F8E2EFCCE318CDB7F9A21</key>
+		<string>http://git.toptal.com/nico/project-barret-breshears.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TravelApp/TravelApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BCEFADE4891BE3610B8F8E2EFCCE318CDB7F9A21</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://git.toptal.com/nico/project-barret-breshears.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BCEFADE4891BE3610B8F8E2EFCCE318CDB7F9A21</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BCEFADE4891BE3610B8F8E2EFCCE318CDB7F9A21</string>
+			<key>IDESourceControlWCCName</key>
+			<string>project-barret-breshears</string>
+		</dict>
+	</array>
+</dict>
+</plist>
